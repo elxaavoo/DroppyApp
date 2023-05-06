@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_drops">
+
+    <fragment
+        android:id="@+id/navigation_drops"
+        android:name="es.ieslavereda.droppyapp.ui.drop.DropFragment"
+        android:label="@string/title_drop"
+        tools:layout="@layout/fragment_drop" />
+
+    <fragment
+        android:id="@+id/navigation_clothes"
+        android:name="es.ieslavereda.droppyapp.ui.clothes.ClothesFragment"
+        android:label="@string/title_clothes"
+        tools:layout="@layout/fragment_things" />
+
+    <fragment
+        android:id="@+id/navigation_sell"
+        android:name="es.ieslavereda.droppyapp.ui.sell.SellFragment"
+        android:label="@string/title_sell"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/navigation_things"
+        android:name="es.ieslavereda.droppyapp.ui.things.ThingsFragment"
+        android:label="@string/title_sell"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="es.ieslavereda.droppyapp.ui.account.AccountFragment"
+        android:label="@string/title_sell"
+        tools:layout="@layout/fragment_account" />
+</navigation>

@@ -1,0 +1,72 @@
+<resources>
+    <string name="abc_action_bar_up_description">Subir</string>
+
+    <string name="app_name">DroppyApp</string>
+    <string name="title_drop">Drops</string>
+    <string name="title_clothes">Ropa</string>
+    <string name="title_sell">Vender</string>
+    <string name="title_outfit">Outfits</string>
+    <string name="title_account">Perfil</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Iniciar sesión o Registrarse</string>
+    <string name="action_sign_in_short">Iniciar sesion</string>
+    <string name="welcome">"¡Bienvenido!"</string>
+    <string name="invalid_username">Nombre de usuario no valido</string>
+    <string name="invalid_password">La contraseña debe contener más de 5 carácteres</string>
+    <string name="login_failed">Inicio de sesión fallido</string>
+    <string name="login">Iniciar Sesion</string>
+    <string name="register">Registrarse</string>
+    <string name="user">Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="email">Correo Electronico</string>
+    <string name="confirmpass">Confirmar Contraseña</string>
+    <string name="name">Nombre</string>
+    <string name="lastname">Apellido</string>
+    <string name="noHaveLogin">No tengo usuario, registrar uno</string>
+    <string name="havaAccount">Ya tengo una cuenta</string>
+    <string name="desing">Apariencia</string>
+    <string name="dark_mode">Modo Oscuro</string>
+    <string name="my_cloths">Mis Prendas</string>
+    <string name="my_buys">Mis Compras</string>
+    <string name="my_outfits">Mis Outfits</string>
+    <string name="language">Idioma Establecido</string>
+    <string name="desactivated">Desactivado</string>
+    <string name="default_device_theme">Configuración del dispositivo</string>
+    <string name="account">Cuenta</string>
+    <string name="category">Categoria</string>
+    <string name="brand">Marca</string>
+    <string name="state">Estado</string>
+    <string name="description">Descripción</string>
+    <string name="title">Título</string>
+    <string name="add_photo">Añadir Foto</string>
+    <string name="user_profile">Perfil de Usuario</string>
+    <string name="example_title">Ejemplo: Camisa de cuadros de Zara</string>
+    <string name="example_description">Ejemplo: Usado una vez, da poca talla, etc.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Mensajes</string>
+    <string name="sync_header">Sincronizar</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Tu firma</string>
+    <string name="reply_title">Accion Default</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sincronizar correo periodicamente</string>
+    <string name="attachment_title">Descargando contenido</string>
+    <string name="attachment_summary_on">Descarga automática del contenido
+    </string>
+    <string name="attachment_summary_off">Descarga manual del contenido</string>
+    <string name="title_activity_my_clothes">MyClothesActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

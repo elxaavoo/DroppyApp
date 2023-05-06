@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "420616524823",
+    "project_id": "droppydb",
+    "storage_bucket": "droppydb.appspot.com",
+	"firebase_url": "https://droppydb-default-rtdb.europe-west1.firebasedatabase.app/"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420616524823:android:c48a249ffdf0397e9eb852",
+        "android_client_info": {
+          "package_name": "es.ieslavereda.droppyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420616524823-hk9gtoiu6g52jutvs8e7aeoc78hddgoi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6hzCkPi6oXdQX_o94HZlAk5qANSX8OGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420616524823-hk9gtoiu6g52jutvs8e7aeoc78hddgoi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

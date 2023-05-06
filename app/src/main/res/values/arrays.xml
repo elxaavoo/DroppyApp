@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="dark_mode_entrie">
+        <item>Activado</item>
+        <item>Desactivado</item>
+        <item>Configuración del Dispositivo</item>
+    </string-array>
+
+    <string-array name="dark_mode_values">
+        <item>DARK</item>
+        <item>LIGHT</item>
+        <item>DEFAULT</item>
+    </string-array>
+</resources>
