@@ -2,20 +2,22 @@ package es.ieslavereda.droppyapp.Model;
 
 import android.net.Uri;
 
+import es.ieslavereda.droppyapp.Utils.Generator;
+
 public class Photo {
-    private int id;
+    private String id;
     private Uri imagen;
 
     public Photo(Uri imagen) {
-        this.id = id;
+        this.id = Generator.generatePhotoId();
         this.imagen = imagen;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

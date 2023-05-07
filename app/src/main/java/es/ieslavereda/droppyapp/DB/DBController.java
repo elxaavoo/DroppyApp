@@ -19,12 +19,16 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import es.ieslavereda.droppyapp.Model.Brand;
 import es.ieslavereda.droppyapp.Model.Category;
+import es.ieslavereda.droppyapp.Model.Cloth;
 import es.ieslavereda.droppyapp.Model.Interface.OnBrandExistsListener;
 import es.ieslavereda.droppyapp.Model.Interface.OnCategoryExistsListener;
 import es.ieslavereda.droppyapp.Model.Interface.OnGetAllBrands;
+import es.ieslavereda.droppyapp.Model.Interface.OnGetAllCategories;
+import es.ieslavereda.droppyapp.Model.Interface.OnGetCategory;
 import es.ieslavereda.droppyapp.Model.Interface.OnUserExistsListener;
 import es.ieslavereda.droppyapp.Model.User;
 import es.ieslavereda.droppyapp.Utils.Generator;
@@ -95,6 +99,27 @@ public class DBController {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 listener.onErrorGetBrands(error);
+            }
+        });
+    }
+
+    public void getAllCategories(OnGetAllCategories listener) {
+        DatabaseReference dbRef = db.getReference("/Categories");
+
+        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                List<Category> categories = new ArrayList<>();
+                for (DataSnapshot brandSnap : snapshot.getChildren()){
+                    Category category = brandSnap.getValue(Category.class);
+                    categories.add(category);
+                }
+                listener.onGetCategories(categories);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                listener.onErrorGetCategories(error);
             }
         });
 
@@ -195,6 +220,52 @@ public class DBController {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 listener.onBrandExists(false);
+            }
+        });
+
+    }
+
+    public boolean createNewCloth(Cloth cloth){
+        DatabaseReference dbRef = db.getReference("/Clothes");
+        try{
+            dbRef.push().setValue(cloth).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+                        // La escritura se completó correctamente
+                        Log.d("Firebase: ", "Producto creado correctamente");
+                    } else {
+                        // La escritura no se completó correctamente
+                        Log.e("ERROR REGISTER: ", "Error al agregar el usuario", task.getException());
+                    }
+                }
+            });
+            return true;
+        } catch (Exception e){
+            Log.e("ERROR","Error al añadir produfcto, ", e);
+            return false;
+        }
+
+    }
+
+    public void getCategory(String name, OnGetCategory listener) {
+        DatabaseReference dbRef = db.getReference("/Brands");
+
+        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Category category = null;
+                for (DataSnapshot categorySnap : snapshot.getChildren()){
+                    if (Objects.equals(Objects.requireNonNull(categorySnap.getValue(Category.class)).getName(), name)){
+                        category = categorySnap.getValue(Category.class);
+                    }
+                }
+                listener.onGetCategoryObject(category);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                listener.onErrorGetCategory(error);
             }
         });
 

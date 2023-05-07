@@ -14,10 +14,14 @@ public class Cloth {
     private String idSeller;
     private Category category;
     private Brand brand;
+    private boolean available;
+    private int stock;
+
+    private String state;
 
     public Cloth(){}
 
-    public Cloth(String name, double price, Size size, List<Photo> images, String description, String idSeller, Category category, Brand brand) {
+    public Cloth(String name, double price, Size size, List<Photo> images, String description, String idSeller, Category category, Brand brand, int stock, String state) {
         this.idCloth = Generator.generateClothId();
         this.price = price;
         this.name = name;
@@ -27,6 +31,50 @@ public class Cloth {
         this.idSeller = idSeller;
         this.category = category;
         this.brand = brand;
+        this.available = true;
+        this.stock = stock;
+        this.state = state;
+    }
+
+    public Cloth(String name, double price, Size size, List<Photo> images, String description, String idSeller, Category category, Brand brand, String state) {
+        this.idCloth = Generator.generateClothId();
+        this.price = price;
+        this.name = name;
+        this.size = size;
+        this.images = images;
+        this.description = description;
+        this.idSeller = idSeller;
+        this.category = category;
+        this.brand = brand;
+        this.available = true;
+        this.stock = 1;
+        this.state = state;
+    }
+
+
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
     public String getIdCloth() {

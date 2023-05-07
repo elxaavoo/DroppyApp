@@ -17,23 +17,27 @@ public class Generator {
     }
     public static String generateBrandId(){
         String uniqueID = UUID.randomUUID().toString();
-        return "brand" + uniqueID;
+        return "brand_" + uniqueID;
     }
     public static String generateCategoryId(){
         String uniqueID = UUID.randomUUID().toString();
-        return "category" + uniqueID;
+        return "category_" + uniqueID;
     }
     public static String generateDiscountId(){
         String uniqueID = UUID.randomUUID().toString();
-        return "discount" + uniqueID;
+        return "discount_" + uniqueID;
     }
     public static String generateDropId(){
         String uniqueID = UUID.randomUUID().toString();
-        return "drop" + uniqueID;
+        return "drop_" + uniqueID;
     }
     public static String generatePostId(){
         String uniqueID = UUID.randomUUID().toString();
-        return "post" + uniqueID;
+        return "post_" + uniqueID;
+    }
+    public static String generatePhotoId(){
+        String uniqueID = UUID.randomUUID().toString();
+        return "photo_" + uniqueID;
     }
 
 }

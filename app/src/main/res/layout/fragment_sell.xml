@@ -148,6 +148,29 @@
                 app:layout_constraintBottom_toTopOf="@+id/estadoSellCloth"
                 app:layout_constraintStart_toStartOf="@+id/estadoSellCloth" />
 
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/size"
+                app:layout_constraintBottom_toTopOf="@+id/sizeList"
+                app:layout_constraintStart_toStartOf="@+id/sizeList" />
+
+            <TextView
+                android:id="@+id/sizeList"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_corners"
+                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                android:hint="@string/size"
+                android:padding="12dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/estadoSellCloth"
+                app:layout_constraintStart_toStartOf="@+id/estadoSellCloth"
+                app:layout_constraintTop_toBottomOf="@+id/estadoSellCloth" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/imagenesSeleccionadas"
                 android:layout_width="0dp"
@@ -155,6 +178,46 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pricelothLay"
+                style="?attr/textInputFilledStyle"
+                android:layout_width="350dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="24dp"
+                android:hint="@string/price"
+                app:helperText="@string/price_title"
+                app:helperTextEnabled="true"
+                app:layout_constraintEnd_toEndOf="@+id/sizeList"
+                app:layout_constraintStart_toStartOf="@+id/sizeList"
+                app:layout_constraintTop_toBottomOf="@+id/sizeList"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/priceSellCloth"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/addCloth"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="201dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:foregroundGravity="center_horizontal"
+                android:text="@string/add_product"
+                android:textSize="16sp"
+                app:icon="@drawable/camiseta_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/pricelothLay"
+                app:layout_constraintStart_toStartOf="@+id/pricelothLay"
+                app:layout_constraintTop_toBottomOf="@+id/pricelothLay"
+                tools:ignore="MissingConstraints,RtlHardcoded" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

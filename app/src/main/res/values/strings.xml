@@ -44,6 +44,13 @@
     <string name="user_profile">Perfil de Usuario</string>
     <string name="example_title">Ejemplo: Camisa de cuadros de Zara</string>
     <string name="example_description">Ejemplo: Usado una vez, da poca talla, etc.</string>
+    <string name="size">Talla</string>
+    <string name="price">Precio</string>
+    <string name="price_title">Ejemplo: 19€</string>
+    <string name="add_product">Añadir Producto</string>
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Preference Titles -->
@@ -60,13 +67,13 @@
     <string name="attachment_summary_on">Descarga automática del contenido
     </string>
     <string name="attachment_summary_off">Descarga manual del contenido</string>
-    <string name="title_activity_my_clothes">MyClothesActivity</string>
+    <string name="title_activity_my_clothes" translatable="false">MyClothesActivity</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
 </resources>
